@@ -1,0 +1,7 @@
+EnumExclude=
+package=Modele
+databaseUrl=jdbc:mysql://localhost/base1
+driver=com.mysql.jdbc.Driver
+EnumInclude=
+username=root
+ConfigurationFile=\hibernateTest\src\hibernate.cfg.xml

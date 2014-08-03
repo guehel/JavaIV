@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping package="Modele">
+	<class name="TContact" table="t_contact">
+		<id name="Id" type="integer">
+ 			<column name="id" sql-type="int(4)"/>
+ 			<generator class="increment" />
+ 		</id>
+		<property
+			column="prenom"
+			length="50"
+			name="Prenom"
+			not-null="true"
+			type="string"
+		 />
+		
+		<property
+			column="age"
+			length="4"
+			name="Age"
+			not-null="true"
+			type="integer"
+		 />
+		<property
+			column="nom"
+			length="50"
+			name="Nom"
+			not-null="true"
+			type="string"
+		 />
+	</class>
+</hibernate-mapping>

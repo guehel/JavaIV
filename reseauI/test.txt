@@ -1,0 +1,6 @@
+Thread 1 : création
+Thread 1 : je suis en attente
+Thread 2 : création
+Thread 2 : je suis en attente
+Thread 2 : fin de l'Attente
+Thread 1 : fin de l'Attente

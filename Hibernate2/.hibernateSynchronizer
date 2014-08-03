@@ -1,0 +1,7 @@
+EnumExclude=
+package=vente
+databaseUrl=jdbc:mysql://localhost/monblog
+driver=com.mysql.jdbc.Driver
+EnumInclude=
+username=root
+ConfigurationFile=\Hibernate2\src\hibernate.cfg.xml

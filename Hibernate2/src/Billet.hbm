@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping package="vente">
+	<class name="Billet" table="billet">
+		<id
+			column="idbillet"
+			name="Idbillet"
+			type="integer"
+		>
+			<generator class="vm" />
+		</id>
+		<property
+			column="contenu"
+			length="400"
+			name="Contenu"
+			not-null="true"
+			type="string"
+		 />
+		<property
+			column="date"
+			length="19"
+			name="Date"
+			not-null="true"
+			type="timestamp"
+		 />
+		<property
+			column="titre"
+			length="100"
+			name="Titre"
+			not-null="true"
+			type="string"
+		 />
+
+		<set inverse="true" name="CommentaireSet">
+			<key column="billet_idbillet" />
+			<one-to-many class="Commentaire" />
+		</set>
+	</class>
+</hibernate-mapping>

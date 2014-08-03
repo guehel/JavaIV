@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping package="vente">
+	<class name="Commentaire" table="commentaire">
+		<composite-id class="CommentairePK" name="Id">
+			<key-property
+				column="idCom"
+				name="IdCom"
+				type="integer"
+			 />
+			<key-many-to-one
+				class="Billet"
+				column="billet_idbillet"
+				name="BilletIdbillet"
+			 />
+		</composite-id>
+		<property
+			column="auteurCom"
+			length="100"
+			name="AuteurCom"
+			not-null="true"
+			type="string"
+		 />
+		<property
+			column="contenuCom"
+			length="100"
+			name="ContenuCom"
+			not-null="true"
+			type="string"
+		 />
+		<property
+			column="dateCom"
+			length="19"
+			name="DateCom"
+			not-null="true"
+			type="timestamp"
+		 />
+	</class>
+</hibernate-mapping>
